@@ -543,7 +543,7 @@
           if (tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('success');
           const when = res.startIso ? new Date(res.startIso) : null;
           const whenLabel = when
-            ? when.toLocaleString('ru-RU', { timeZone:'Europe/Moscow', day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' }) + ' МСК'
+            ? when.toLocaleString('ru-RU', { timeZone:'Europe/Moscow', day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' }) + ' МСК+2'
             : '';
           tg.showAlert('Запись привязана к вашему Telegram.' + (whenLabel ? '\n' + whenLabel + (res.subject ? ' • ' + res.subject : '') : ''));
           switchTab('my'); loadMy();
@@ -576,6 +576,7 @@
   </script>
 </body>
 </html>
+
 
 
 
