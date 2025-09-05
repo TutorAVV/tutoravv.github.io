@@ -266,7 +266,7 @@
           <input id="date" name="date" type="date" required>
         </div>
         <div>
-          <label for="time">Время слота (МСК)</label>
+          <label for="time">Время слота (МСК+2)</label>
           <select id="time" name="time" required disabled></select>
         </div>
       </div>
@@ -462,7 +462,7 @@
   });
 
   function renderConfirm({ when, subject, tme, channel, email }){
-    confirmWhen.textContent = `${when} МСК`;
+    confirmWhen.textContent = `${when} МСК+2`;
     confirmSubject.textContent = subject || 'Занятие';
 
     let note = `Приглашение отправлено на ${email}.`;
@@ -494,7 +494,7 @@
 
     confirmCard.classList.remove('hidden');
     // Симпатичнее статус: галочка + краткие детали
-    showStatus(`✅ Готово! Бронирование создано • ${subject || 'Занятие'} • ${when} МСК`, 'success', { stickyMs: 15000 });
+    showStatus(`✅ Готово! Бронирование создано • ${subject || 'Занятие'} • ${when} МСК+2`, 'success', { stickyMs: 15000 });
   }
 
   function showLoading(text){
@@ -517,6 +517,7 @@
 </script>
 </body>
 </html>
+
 
 
 
